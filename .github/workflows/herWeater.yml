@@ -1,5 +1,5 @@
 # name属性用来指定这个工作流的名字
-name: 天气信息
+name: 天气信息 TO QQ
 
 # 这个部分用来指定能够触发工作流执行的事件
 on:
@@ -7,7 +7,7 @@ on:
   repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: * 9 * * *
+    - cron: 30 08 * * *
 
 
 
