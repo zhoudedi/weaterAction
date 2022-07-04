@@ -4,8 +4,8 @@
 import requests, json
 import os
 
-SCKEY=os.environ.get('SCT72533TcUYS78Qn5SfL0qnAGRZG9obb') ##Server酱推送KEY
-SKey=os.environ.get('e8dd17c722b284e14092c082fee0ee09')
+SCKEY=os.environ.get('SCKEY') ##Server酱推送KEY
+SKey=os.environ.get('SKey')
 def get_iciba_everyday():
     icbapi = 'http://open.iciba.com/dsapi/'
     eed = requests.get(icbapi)
@@ -28,7 +28,7 @@ def ServerPush(info): #Server酱推送
 def CoolPush(info): #CoolPush酷推
     # cpurl = 'https://push.xuthus.cc/group/'+spkey   #推送到QQ群
     # cpurl = 'https://push.xuthus.cc/send/' + SKey  # 推送到个人QQhttps://push.xuthus.cc/psend/e8dd17c722b284e14092c082fee0ee09
-    api='https://push.xuthus.cc/psend/{}'.format(e8dd17c722b284e14092c082fee0ee09)
+    api='https://push.xuthus.cc/psend/{}'.format(SKey)
     print(api)
     print(info)
     requests.post(api, info.encode('utf-8'))
