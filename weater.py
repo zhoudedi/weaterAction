@@ -4,8 +4,8 @@
 import requests, json
 import os
 
-SCKEY=os.environ.get('SCKEY') ##Server酱推送KEY
-SKey=e8dd17c722b284e14092c082fee0ee09
+SCKEY=os.environ.get('SCT72533TcUYS78Qn5SfL0qnAGRZG9obb') ##Server酱推送KEY
+SKey=os.environ.get('e8dd17c722b284e14092c082fee0ee09')
 def get_iciba_everyday():
     icbapi = 'http://open.iciba.com/dsapi/'
     eed = requests.get(icbapi)
