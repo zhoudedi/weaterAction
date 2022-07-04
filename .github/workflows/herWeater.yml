@@ -1,13 +1,13 @@
 # name属性用来指定这个工作流的名字
-name: GITHUB ACITON Weater
+name: 天气信息
 
 # 这个部分用来指定能够触发工作流执行的事件
 on:
   # 当对分支main进行push操作的时候，这个工作流就被触发了
-  push:
-    branches: [ main ]
+  repository_dispatch:
+  workflow_dispatch:
   schedule:
-    - cron: 10 23 * * *
+    - cron: * 9 * * *
 
 
 
