@@ -28,13 +28,13 @@ def ServerPush(info): #Server酱推送
 def CoolPush(info): #CoolPush酷推
     # cpurl = 'https://push.xuthus.cc/group/'+spkey   #推送到QQ群
     # cpurl = 'https://push.xuthus.cc/send/' + SKey  # 推送到个人QQ
-    api='https://push.xuthus.cc/pgroup/{}'.format(SKey)
-    #api='https://push.xuthus.cc/psend/{}'.format(SKey)
-    #print(api)
+    #api2='https://push.xuthus.cc/pgroup/{}'.format(SKey)
+    api='https://push.xuthus.cc/psend/{}'.format(SKey)
     print(api)
+    #print(api2)
     print(info)
+    #requests.post(api2, info.encode('utf-8'))
     requests.post(api, info.encode('utf-8'))
-    #requests.post(api, info.encode('utf-8'))
 def main():
     try:
         api = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
@@ -61,7 +61,7 @@ def main():
             tips = d["data"]["forecast"][0]["notice"] #温馨提示
             # 天气提示内容
             tdwt = "【今日❤️天气】\n城市： " + parent + city + \
-                   "\n日期： " + date + "爱你鑫鑫😘"+\n星期: " + week + "\n天气: " + weather_type + "\n温度: " + wendu_high + " / "+ wendu_low + "\n湿度: " + \
+                   "\n日期：" + date + "爱你鑫鑫😘"\n星期: " + week + "\n天气: " + weather_type + "\n温度: " + wendu_high + " / "+ wendu_low + "\n湿度: " + \
                     shidu + "\nPM25: " + pm25 + "\nPM10: " + pm10 + "\n空气质量: " + quality + \
                    "\n风力风向: " + fx + fl + "\n感冒指数: "  + ganmao + "\n温馨提示： " + tips + "\n更新时间: " + update_time + "\n✁-----------------------------------------\n" + get_iciba_everyday()
             # print(tdwt)
