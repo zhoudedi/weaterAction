@@ -38,7 +38,7 @@ def CoolPush(info): #CoolPush酷推
 def main():
     try:
         api = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
-        city_code = '101300703'   #进入https://where.heweather.com/index.html查询你的城市代码
+        city_code = '101280603'   #进入https://where.heweather.com/index.html查询你的城市代码
         tqurl = api + city_code
         response = requests.get(tqurl)
         d = response.json()         #将数据以json形式返回，这个d就是返回的json数据
@@ -61,7 +61,7 @@ def main():
             tips = d["data"]["forecast"][0]["notice"] #温馨提示
             # 天气提示内容
             tdwt = "【今日❤️天气】\n城市： " + parent + city + \
-                   "\n日期：" + date + " 爱你鑫鑫" + "\n星期: " + week + "\n天气: " + weather_type + "\n温度: " + wendu_high + " / "+ wendu_low + "\n湿度: " + \
+                   "\n日期：" + date + " 爱你鑫鑫😘" + "\n星期: " + week + "\n天气: " + weather_type + "\n温度: " + wendu_high + " / "+ wendu_low + "\n湿度: " + \
                     shidu + "\nPM25: " + pm25 + "\nP M10: " + pm10 + "\n空气质量: " + quality + \
                    "\n风力风向: " + fx + fl + "\n感冒指数: "  + ganmao + "\n温馨提示： " + tips + "\n更新时间: " + update_time + "\n✁-----------------------------------------\n" + get_iciba_everyday()
             # print(tdwt)
