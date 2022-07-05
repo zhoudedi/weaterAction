@@ -97,8 +97,8 @@ def main():
             ganmaoq = dq["data"]["ganmao"] #感冒指数
             tipsq = dq["data"]["forecast"][0]["notice"] #温馨提示
             # 天气提示内容
-            tdwtq = "【今日份天气❤️】\n城市： " + parentq + cityq + \
-                   "\n日期：" + dateq + "\n星期: " + weekq + "\n天气: " + weather_typeq + "\n温度: " + wendu_highq + " / "+ wendu_lowq + "\n湿度: " + \
+            tdwtq = "【今日❤️天气】\n城市： " + parentq + cityq + \
+                   "\n日期：" + dateq + " 爱你鑫鑫😘" + "\n星期: " + weekq + "\n天气: " + weather_typeq + "\n温度: " + wendu_highq + " / "+ wendu_lowq + "\n湿度: " + \
                     shiduq + "\nPM25: " + pm25q + "\nPM10: " + pm10q + "\n空气质量: " + qualityq + \
                    "\n风力风向: " + fxq + flq + "\n感冒指数: "  + ganmaoq + "\n温馨提示： " + tipsq + "\n更新时间: " + update_timeq + "\n✁-----------------------------------------\n" + get_iciba_everyday()
             # print(tdwt)
