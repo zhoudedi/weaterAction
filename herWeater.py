@@ -44,15 +44,10 @@ def CoolPush(info): #QQ
 def main():
     try:
         api = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
-        apiq = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
         city_code = '101300703'   #101300703进入https://where.heweather.com/index.html查询你的城市代码
-        city_codeq = '101280601'   #101300703进入https://where.heweather.com/index.html查询你的城市代码
         tqurl = api + city_code
-        tqurlq = apiq + city_codeq
         response = requests.get(tqurl)
-        responseq = requests.get(tqurlq)
         d = response.json()         #将数据以json形式返回，这个d就是返回的json数据
-        dq = responseq.json()         #将数据以json形式返回，这个d就是返回的json数据
         if(d['status'] == 200):     #当返回状态码为200，输出天气状况
             parent = d["cityInfo"]["parent"] #省
             city = d["cityInfo"]["city"] #市
@@ -75,7 +70,16 @@ def main():
                    "\n日期：" + date + "\n星期: " + week + "\n天气: " + weather_type + "\n温度: " + wendu_high + " / "+ wendu_low + "\n湿度: " + \
                     shidu + "\nPM25: " + pm25 + "\nPM10: " + pm10 + "\n空气质量: " + quality + \
                    "\n风力风向: " + fx + fl + "\n感冒指数: "  + ganmao + "\n温馨提示： " + tips + "\n更新时间: " + update_time + "\n✁-----------------------------------------\n" + get_iciba_everyday()
-            if(dq['status'] == 200):     #当返回状态码为200，输出天气状况
+            # print(tdwt)
+            # requests.post(cpurl,tdwt.encode('utf-8'))         #把天气数据转换成UTF-8格式，不然要报错。
+            # ServerPush(tdwt)
+            CoolPush(tdwt)
+        apiq = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
+        city_codeq = '101280601'   #101300703进入https://where.heweather.com/index.html查询你的城市代码
+        tqurlq = apiq + city_codeq
+        responseq = requests.get(tqurlq)
+        dq = responseq.json()         #将数据以json形式返回，这个d就是返回的json数据
+        if(dq['status'] == 200):     #当返回状态码为200，输出天气状况
             parentq = dq["cityInfo"]["parent"] #省
             cityq = dq["cityInfo"]["city"] #市
             update_timeq = dq["time"] #更新时间
@@ -100,7 +104,6 @@ def main():
             # print(tdwt)
             # requests.post(cpurl,tdwt.encode('utf-8'))         #把天气数据转换成UTF-8格式，不然要报错。
             # ServerPush(tdwt)
-            CoolPush(tdwt)
             CoolPushq(tdwtq)
     except Exception:
         error = '【出现错误】\n　　今日天气推送错误，请检查服务或网络状态！'
