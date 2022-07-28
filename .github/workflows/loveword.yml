@@ -4,11 +4,11 @@ name: push loveword to QQ
 on:
   # 当对分支main进行push操作的时候，这个工作流就被触发了
   repository_dispatch:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
-  schedule:
-    - cron: 30 13 * * *
+  #workflow_dispatch:
+  #push:
+    #branches: [ main ]
+  #schedule:
+    #- cron: 30 13 * * *
 
 
 
