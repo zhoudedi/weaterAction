@@ -75,7 +75,7 @@ def main():
             # ServerPush(tdwt)
             CoolPush(tdwt)
         apiq = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
-        city_codeq = '101280601'   #101300703进入https://where.heweather.com/index.html查询你的城市代码
+        city_codeq = '101280603'   #101280601进入https://where.heweather.com/index.html查询你的城市代码
         tqurlq = apiq + city_codeq
         responseq = requests.get(tqurlq)
         dq = responseq.json()         #将数据以json形式返回，这个d就是返回的json数据
