@@ -36,7 +36,7 @@ def CoolPushq(infoq): #QQ群
 def CoolPush(info): #QQ
     # cpurl = 'https://push.xuthus.cc/group/'+spkey   #推送到QQ群
     # cpurl = 'https://push.xuthus.cc/send/' + SKey  # 推送到个人QQ
-    api='https://push.xuthus.cc/psend/{}'.format(SKey)
+    api='https://push.xuthus.cc/psend/{}'.format(SKey) 
     print(api)
     print(info)
     requests.post(api, info.encode('utf-8'))
