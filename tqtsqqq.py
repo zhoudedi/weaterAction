@@ -70,7 +70,7 @@ def main():
                    "\n日期：" + date + "\n星期: " + week + "\n天气: " + weather_type + "\n温度: " + wendu_high + " / "+ wendu_low + "\n湿度: " + \
                     shidu + "\nPM25: " + pm25 + "\nPM10: " + pm10 + "\n空气质量: " + quality + \
                    "\n风力风向: " + fx + fl + "\n感冒指数: "  + ganmao + "\n温馨提示： " + tips + "\n更新时间: " + update_time + "\n✁-----------------------------------------\n" + get_iciba_everyday()
-            tdwt = get_iciba_everyday()
+            tdwt = "\n✁-----------------------------------------\n" + get_iciba_everyday()
             # print(tdwt)
             # requests.post(cpurl,tdwt.encode('utf-8'))         #把天气数据转换成UTF-8格式，不然要报错。
             # ServerPush(tdwt)
