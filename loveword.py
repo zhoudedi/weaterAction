@@ -58,7 +58,7 @@ def getlovewords():
 def CoolPush(info): #CoolPush酷推
     # cpurl = 'https://push.xuthus.cc/group/'+spkey   #推送到QQ群
     # cpurl = 'https://push.xuthus.cc/send/' + SKey  # 推送到个人QQ
-    api='https://push.xuthus.cc/psend/{}'.format(SKEY)
+    api='https://push.xuthus.cc/pgroup/{}'.format(SKey)
     print(info)
     r=requests.post(api, info.encode('utf-8'))
     if(r.status_code==200):
