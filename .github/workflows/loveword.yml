@@ -6,8 +6,8 @@ on:
   # 当对分支main进行push操作的时候，这个工作流就被触发了
   repository_dispatch:
   workflow_dispatch:
-  schedule:
-    - cron: 28 3 * * *
+#   schedule:
+#     - cron: 28 3 * * *
 
 
 
